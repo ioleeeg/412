@@ -1,0 +1,235 @@
+
+User2@DESKTOP-NM66VNJ MINGW64 ~/Desktop/demo/412 (main)
+$ ls
+LICENSE  README.md
+
+User2@DESKTOP-NM66VNJ MINGW64 ~/Desktop/demo/412 (main)
+$ git config user.name "tester"
+
+User2@DESKTOP-NM66VNJ MINGW64 ~/Desktop/demo/412 (main)
+$ ls
+2txt.txt  LICENSE  README.md
+
+User2@DESKTOP-NM66VNJ MINGW64 ~/Desktop/demo/412 (main)
+$ ls
+2.txt  LICENSE  README.md
+
+User2@DESKTOP-NM66VNJ MINGW64 ~/Desktop/demo/412 (main)
+$ git add .
+
+User2@DESKTOP-NM66VNJ MINGW64 ~/Desktop/demo/412 (main)
+$ git stotus
+git: 'stotus' is not a git command. See 'git --help'.
+
+The most similar command is
+        status
+
+User2@DESKTOP-NM66VNJ MINGW64 ~/Desktop/demo/412 (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   2.txt
+
+
+User2@DESKTOP-NM66VNJ MINGW64 ~/Desktop/demo/412 (main)
+$ git commit -r "new file"
+error: unknown switch `r'
+usage: git commit [-a | --interactive | --patch] [-s] [-v] [-u<mode>] [--amend]
+                  [--dry-run] [(-c | -C | --squash) <commit> | --fixup [(amend|reword):]<commit>]
+                  [-F <file> | -m <msg>] [--reset-author] [--allow-empty]
+                  [--allow-empty-message] [--no-verify] [-e] [--author=<author>]
+                  [--date=<date>] [--cleanup=<mode>] [--[no-]status]
+                  [-i | -o] [--pathspec-from-file=<file> [--pathspec-file-nul]]
+                  [(--trailer <token>[(=|:)<value>])...] [-S[<keyid>]]
+                  [--] [<pathspec>...]
+
+    -q, --[no-]quiet      suppress summary after successful commit
+    -v, --[no-]verbose    show diff in commit message template
+
+Commit message options
+    -F, --[no-]file <file>
+                          read message from file
+    --[no-]author <author>
+                          override author for commit
+    --[no-]date <date>    override date for commit
+    -m, --[no-]message <message>
+                          commit message
+    -c, --[no-]reedit-message <commit>
+                          reuse and edit message from specified commit
+    -C, --[no-]reuse-message <commit>
+                          reuse message from specified commit
+    --[no-]fixup [(amend|reword):]commit
+                          use autosquash formatted message to fixup or amend/reword specified commit
+    --[no-]squash <commit>
+                          use autosquash formatted message to squash specified commit
+    --[no-]reset-author   the commit is authored by me now (used with -C/-c/--amend)
+    --trailer <trailer>   add custom trailer(s)
+    -s, --[no-]signoff    add a Signed-off-by trailer
+    -t, --[no-]template <file>
+                          use specified template file
+    -e, --[no-]edit       force edit of commit
+    --[no-]cleanup <mode> how to strip spaces and #comments from message
+    --[no-]status         include status in commit message template
+    -S, --[no-]gpg-sign[=<key-id>]
+                          GPG sign commit
+
+Commit contents options
+    -a, --[no-]all        commit all changed files
+    -i, --[no-]include    add specified files to index for commit
+    --[no-]interactive    interactively add files
+    -p, --[no-]patch      interactively add changes
+    -o, --[no-]only       commit only specified files
+    -n, --no-verify       bypass pre-commit and commit-msg hooks
+    --verify              opposite of --no-verify
+    --[no-]dry-run        show what would be committed
+    --[no-]short          show status concisely
+    --[no-]branch         show branch information
+    --[no-]ahead-behind   compute full ahead/behind values
+    --[no-]porcelain      machine-readable output
+    --[no-]long           show status in long format (default)
+    -z, --[no-]null       terminate entries with NUL
+    --[no-]amend          amend previous commit
+    --no-post-rewrite     bypass post-rewrite hook
+    --post-rewrite        opposite of --no-post-rewrite
+    -u, --[no-]untracked-files[=<mode>]
+                          show untracked files, optional modes: all, normal, no. (Default: all)
+    --[no-]pathspec-from-file <file>
+                          read pathspec from file
+    --[no-]pathspec-file-nul
+                          with --pathspec-from-file, pathspec elements are separated with NUL character
+
+
+User2@DESKTOP-NM66VNJ MINGW64 ~/Desktop/demo/412 (main)
+$ git commit -m "new file"
+Author identity unknown
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: unable to auto-detect email address (got 'User2@DESKTOP-NM66VNJ.(none)')
+
+User2@DESKTOP-NM66VNJ MINGW64 ~/Desktop/demo/412 (main)
+$ git config user.email "tester@gmail.com"
+
+User2@DESKTOP-NM66VNJ MINGW64 ~/Desktop/demo/412 (main)
+$ git commit -m "new file"
+[main b7a51fd] new file
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 2.txt
+
+User2@DESKTOP-NM66VNJ MINGW64 ~/Desktop/demo/412 (main)
+$ git push
+fatal: User cancelled dialog.
+error: unable to read askpass response from 'C:/Program Files/Git/mingw64/bin/git-askpass.exe'
+Password for 'https://ioleeeg@github.com':
+remote: Support for password authentication was removed on August 13, 2021.
+remote: Please see https://docs.github.com/get-started/getting-started-with-git/about-remote-repositories#cloning-with-https-urls for information on currently recommended modes of authentication.
+fatal: Authentication failed for 'https://github.com/ioleeeg/412.git/'
+
+User2@DESKTOP-NM66VNJ MINGW64 ~/Desktop/demo/412 (main)
+$ 
+bash: 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: command not found
+
+User2@DESKTOP-NM66VNJ MINGW64 ~/Desktop/demo/412 (main)
+$ git push origin main
+fatal: User cancelled dialog.
+error: unable to read askpass response from 'C:/Program Files/Git/mingw64/bin/git-askpass.exe'
+Password for 'https://ioleeeg@github.com':
+remote: Support for password authentication was removed on August 13, 2021.
+remote: Please see https://docs.github.com/get-started/getting-started-with-git/about-remote-repositories#cloning-with-https-urls for information on currently recommended modes of authentication.
+fatal: Authentication failed for 'https://github.com/ioleeeg/412.git/'
+
+User2@DESKTOP-NM66VNJ MINGW64 ~/Desktop/demo/412 (main)
+$ git push origin main
+
+fatal: User cancelled dialog.
+error: unable to read askpass response from 'C:/Program Files/Git/mingw64/bin/git-askpass.exe'
+Username for 'https://github.com': ioleeeg
+error: unable to read askpass response from 'C:/Program Files/Git/mingw64/bin/git-askpass.exe'
+Password for 'https://github.com':
+remote: No anonymous write access.
+fatal: Authentication failed for 'https://github.com/ioleeeg/412.git/'
+
+User2@DESKTOP-NM66VNJ MINGW64 ~/Desktop/demo/412 (main)
+$ git push origin main
+fatal: User cancelled dialog.
+ierror: unable to read askpass response from 'C:/Program Files/Git/mingw64/bin/git-askpass.exe'
+Password for 'https://ioleeg@github.com':
+remote: Support for password authentication was removed on August 13, 2021.
+remote: Please see https://docs.github.com/get-started/getting-started-with-git/about-remote-repositories#cloning-with-https-urls for information on currently recommended modes of authentication.
+fatal: Authentication failed for 'https://github.com/ioleeeg/412.git/'
+
+User2@DESKTOP-NM66VNJ MINGW64 ~/Desktop/demo/412 (main)
+$ git push origin main
+fatal: User cancelled dialog.
+error: unable to read askpass response from 'C:/Program Files/Git/mingw64/bin/git-askpass.exe'
+Password for 'https://ioleeeg@github.com':
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 293 bytes | 293.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/ioleeeg/412.git
+   93100e0..b7a51fd  main -> main
+
+User2@DESKTOP-NM66VNJ MINGW64 ~/Desktop/demo/412 (main)
+$ git checkout -b test1
+Switched to a new branch 'test1'
+
+User2@DESKTOP-NM66VNJ MINGW64 ~/Desktop/demo/412 (test1)
+$ ls
+2.txt  LICENSE  README.md
+
+User2@DESKTOP-NM66VNJ MINGW64 ~/Desktop/demo/412 (test1)
+$ git add .
+
+User2@DESKTOP-NM66VNJ MINGW64 ~/Desktop/demo/412 (test1)
+$ git commit -m "test1"
+On branch test1
+nothing to commit, working tree clean
+
+User2@DESKTOP-NM66VNJ MINGW64 ~/Desktop/demo/412 (test1)
+$ git push
+fatal: The current branch test1 has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin test1
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+
+User2@DESKTOP-NM66VNJ MINGW64 ~/Desktop/demo/412 (test1)
+$ git push origin
+fatal: The current branch test1 has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin test1
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+
+User2@DESKTOP-NM66VNJ MINGW64 ~/Desktop/demo/412 (test1)
+$ git push origin test1
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+remote:
+remote: Create a pull request for 'test1' on GitHub by visiting:
+remote:      https://github.com/ioleeeg/412/pull/new/test1
+remote:
+To https://github.com/ioleeeg/412.git
+ * [new branch]      test1 -> test1
+
+User2@DESKTOP-NM66VNJ MINGW64 ~/Desktop/demo/412 (test1)
+$
